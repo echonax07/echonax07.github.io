@@ -2,16 +2,16 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #e7f0fd; /* Light blue background */
     color: #333;
 }
 
 header {
-    background: #005a87;
+    background: #005a87; /* Darker blue for contrast */
     color: #ffffff;
     padding-top: 30px;
     min-height: 70px;
-    border-bottom: #076ea1 3px solid;
+    border-bottom: 3px solid #0277bd;
 }
 
 header h1 {
@@ -21,7 +21,7 @@ header h1 {
 }
 
 nav ul {
-    background: #444;
+    background: #0277bd; /* Slightly lighter blue for the navigation */
     list-style-type: none;
     padding: 0;
     text-align: center;
@@ -36,48 +36,41 @@ nav ul li a {
     text-decoration: none;
     padding: 15px 20px;
     display: inline-block;
-    color: #f4f4f4;
+    color: #ffffff;
 }
 
-nav ul li a:hover {
-    background: #f4f4f4;
-    color: #444;
+nav ul li a:hover, nav ul li a:focus {
+    background: #004c70; /* Dark blue for hover/focus */
+    color: #ffffff;
 }
 
 section {
     padding: 20px;
-    margin: 0 15px;
-    background: #fff;
+    margin: 20px 15px;
+    background: #ffffff; /* White background for content sections */
     border-radius: 8px;
-    box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 footer {
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+    background-color: #0277bd; /* Matching the nav */
     color: #ffffff;
-    background-color: #444;
-}
-.dark-mode {
-    background-color: #333;
-    color: #f4f4f4;
 }
 
-.dark-mode header, .dark-mode footer {
-    background: #222;
-    color: #f4f4f4;
+/* Additional styles for buttons or interactive elements if you have any */
+button {
+    background-color: #005a87;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.dark-mode nav ul {
-    background: #555;
-}
-
-.dark-mode nav ul li a {
-    color: #f4f4f4;
-}
-
-.dark-mode nav ul li a:hover {
-    background: #ddd;
-    color: #555;
+button:hover {
+    background-color: #004c70;
 }

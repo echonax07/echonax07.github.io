@@ -1,13 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleThemeBtn = document.createElement('button');
-    toggleThemeBtn.innerText = 'Toggle Dark/Light Mode';
-    document.body.insertBefore(toggleThemeBtn, document.body.firstChild);
-
-    toggleThemeBtn.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        const currentMode = document.body.classList.contains('dark-mode') ? 'Dark' : 'Light';
-        toggleThemeBtn.innerText = `Switch to ${currentMode === 'Dark' ? 'Light' : 'Dark'} Mode`;
+document.addEventListener("DOMContentLoaded", function() {
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
 });
-
-document.body.classList.add('light-mode'); // Default mode
